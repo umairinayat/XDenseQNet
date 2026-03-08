@@ -1,6 +1,6 @@
 # XDenseQNet: Hybrid Quantum Neural Network for Skin Lesion Classification
 
-> A hybrid quantum-classical deep learning framework combining DenseNet121, CBAM attention, and a parameterised quantum circuit for multi-class skin lesion classification on the MSLD v2.0 dataset.
+> A hybrid quantum-classical deep learning framework combining DenseNet121, CBAM attention, and a parameterised quantum circuit for 4-class skin image classification on the MSID dataset.
 
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)]()
@@ -11,7 +11,7 @@
 
 ## Abstract
 
-We propose **XDenseQNet**, a hybrid quantum-classical neural network for multi-class skin lesion classification. The method integrates a DenseNet121 backbone with a Convolutional Block Attention Module (CBAM) and a 4-qubit, 2-layer parameterised quantum circuit. Classical features extracted by the CNN are refined through attention, compressed and encoded into the quantum circuit via RY angle encoding, and the resulting PauliZ expectation values are concatenated with the classical features for final classification. Evaluated on the MSLD v2.0 (Monkeypox Skin Lesion Dataset), XDenseQNet achieves **95.83% accuracy** and **0.9945 ROC-AUC**, outperforming seven classical and quantum baselines across all metrics.
+We propose **XDenseQNet**, a hybrid quantum-classical neural network for multi-class skin image classification. The method integrates a DenseNet121 backbone with a Convolutional Block Attention Module (CBAM) and a 4-qubit, 2-layer parameterised quantum circuit. Classical features extracted by the CNN are refined through attention, compressed and encoded into the quantum circuit via RY angle encoding, and the resulting PauliZ expectation values are concatenated with the classical features for final classification. Evaluated on the **MSID** (Monkeypox Skin Image Dataset), which contains the four classes **Normal, Monkeypox, Chickenpox, and Measles**, XDenseQNet achieves **95.83% accuracy** and **0.9945 ROC-AUC**, outperforming seven classical and quantum baselines across all metrics.
 
 ---
 
@@ -47,7 +47,7 @@ We propose **XDenseQNet**, a hybrid quantum-classical neural network for multi-c
 | A2 (SVM-RBF) | DenseNet121 + CBAM features → SVM | 82.50% | 0.7747 | 0.9613 |
 | A3 | DenseNet121 + Standard Head (no CBAM, no QNN) | 88.33% | 0.8532 | 0.9739 |
 
-*Tested on [MSLD v2.0](https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset). See `results/` for full tables and figures.*
+*Tested on [MSID](https://www.kaggle.com/datasets/dipuiucse/monkeypoxskinimagedataset). See `results/` for full tables and figures.*
 
 ---
 
@@ -64,9 +64,9 @@ pip install -r requirements.txt
 ### 2. Prepare Data
 
 ```bash
-# Download MSLD v2.0 from Kaggle:
-# https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset
-# Place the extracted folders in data/MSLD_v2/
+# Download MSID from Kaggle:
+# https://www.kaggle.com/datasets/dipuiucse/monkeypoxskinimagedataset
+# Place the extracted folders in data/Monkeypox Skin Image Dataset
 
 # Run balanced augmentation + train/val/test split:
 python train.py --config configs/proposed.yaml --prepare-data --skip-phase1 --device cpu
@@ -147,7 +147,7 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 
 ## Acknowledgements
 
-- [MSLD v2.0 Dataset](https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset) — Monkeypox Skin Lesion Dataset
+- [MSID Dataset](https://www.kaggle.com/datasets/dipuiucse/monkeypoxskinimagedataset) — Monkeypox Skin Image Dataset
 - [PennyLane](https://pennylane.ai/) — Quantum machine learning framework
 - [PyTorch](https://pytorch.org/) — Deep learning framework
 - [timm](https://github.com/huggingface/pytorch-image-models) — PyTorch Image Models

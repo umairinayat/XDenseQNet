@@ -1,5 +1,5 @@
 # Swin-Tiny + CBAM + 4-Qubit 2-Layer Hybrid QNN
-# 90.00% accuracy on MSLD v2.0
+# 90.00% accuracy on MSID (4 classes)
 
 model:
   backbone: swin_tiny
@@ -11,7 +11,7 @@ model:
   freeze_last_layer: true
 
 data:
-  dataset_path: "data/MSLD_v2"
+  dataset_path: "data/Monkeypox Skin Image Dataset"
   processed_path: "data/processed"
   image_size: [224, 224]
   batch_size: 16

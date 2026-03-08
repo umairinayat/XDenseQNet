@@ -87,7 +87,7 @@ def get_transforms(
 
 
 class MultiClassDataset(Dataset):
-    """Skin-lesion classification dataset (MSLD v2.0).
+    """Skin-image classification dataset (MSID).
 
     Expects the directory layout::
 

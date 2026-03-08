@@ -1,8 +1,8 @@
 # Dataset
 
-## MSLD v2.0 — Monkeypox Skin Lesion Dataset
+## MSID — Monkeypox Skin Image Dataset
 
-- **Source**: [Kaggle — Monkeypox Skin Lesion Dataset](https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset)
+- **Source**: [Kaggle — Monkeypox Skin Images Dataset (MSID)](https://www.kaggle.com/datasets/dipuiucse/monkeypoxskinimagedataset)
 - **Size**: ~770 original images, 4 classes
 - **Classes**: Normal, Monkeypox, Chickenpox, Measles
 - **Image size**: 224 × 224 (resized during preprocessing)
@@ -10,14 +10,14 @@
 
 ## Setup
 
-1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/nafin59/monkeypox-skin-lesion-dataset)
-2. Extract and place the class folders under `data/MSLD_v2/`:
+1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/dipuiucse/monkeypoxskinimagedataset)
+2. Extract and place the class folders under `data/Monkeypox Skin Image Dataset/`:
    ```
-   data/MSLD_v2/
-   ├── normal/
-   ├── monkeypox/
-   ├── chickenpox/
-   └── measles/
+   data/Monkeypox Skin Image Dataset/
+   ├── Normal/
+   ├── Monkeypox/
+   ├── Chickenpox/
+   └── Measles/
    ```
 3. Run the automated data preparation (balanced augmentation + splitting):
    ```bash
@@ -29,7 +29,7 @@
    ```python
    from utils.augmentation import organize_balanced_dataset
    organize_balanced_dataset(
-       source_path="data/MSLD_v2",
+       source_path="data/Monkeypox Skin Image Dataset",
        target_path="data/processed",
        target_samples=550,
        train_ratio=0.70,

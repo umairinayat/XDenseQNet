@@ -1,6 +1,6 @@
 # XDenseQNet -- Proposed Method Configuration
 # DenseNet121 + CBAM + 4-Qubit 2-Layer Hybrid QNN
-# Achieves 95.83% accuracy on MSLD v2.0
+# Achieves 95.83% accuracy on MSID (4 classes)
 
 # ── Model ─────────────────────────────────────────────
 model:
@@ -14,7 +14,7 @@ model:
 
 # ── Dataset ───────────────────────────────────────────
 data:
-  dataset_path: "data/MSLD_v2"
+  dataset_path: "data/Monkeypox Skin Image Dataset"
   processed_path: "data/processed"
   image_size: [224, 224]
   batch_size: 16
