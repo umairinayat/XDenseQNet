@@ -1,0 +1,61 @@
+# XDenseQNet -- Proposed Method Configuration
+# DenseNet121 + CBAM + 4-Qubit 2-Layer Hybrid QNN
+# Achieves 95.83% accuracy on MSLD v2.0
+
+# ── Model ─────────────────────────────────────────────
+model:
+  backbone: densenet121
+  num_classes: 4
+  n_qubits: 4
+  n_layers: 2
+  dropout_rate: 0.5
+  use_attention: true       # CBAM
+  freeze_last_layer: true
+
+# ── Dataset ───────────────────────────────────────────
+data:
+  dataset_path: "data/MSLD_v2"
+  processed_path: "data/processed"
+  image_size: [224, 224]
+  batch_size: 16
+  num_workers: 0
+  num_classes: 4
+  class_names: ["Normal", "Monkeypox", "Chickenpox", "Measles"]
+  target_samples_per_class: 550
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+# ── Phase 1: Backbone Fine-Tuning ────────────────────
+phase1:
+  epochs: 30
+  learning_rate: 0.001
+  optimizer: Adam
+  weight_decay: 0.001
+  scheduler: ReduceLROnPlateau
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  loss: CrossEntropyLoss
+
+# ── Phase 2: Full Hybrid Training ────────────────────
+phase2:
+  epochs: 80
+  learning_rate: 0.0008
+  optimizer: AdamW
+  weight_decay: 0.001
+  patience: 20
+  loss: LabelSmoothingFocalLoss
+  label_smoothing: 0.1
+  focal_gamma: 2.0
+  scheduler: CosineAnnealingWarmRestarts
+  cosine_T_0: 10
+  cosine_T_mult: 2
+  cosine_eta_min: 1.0e-7
+  unfreeze_epoch: 15
+  unfreeze_lr_multiplier: 0.01
+  use_mixup: true
+  mixup_alpha: 0.2
+  grad_clip_max_norm: 1.0
+
+# ── Reproducibility ──────────────────────────────────
+seed: 42

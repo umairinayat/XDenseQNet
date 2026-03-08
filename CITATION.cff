@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Tariq"
+    given-names: "Shehroz"
+    affiliation: "FAST NUCES, Chiniot-Faisalabad, Pakistan"
+    email: "shehroz.tariq@nu.edu.pk"
+  - family-names: "Inayat"
+    given-names: "Umair"
+    affiliation: "University of Management and Technology, Lahore, Pakistan"
+  - family-names: "Zulfiqar"
+    given-names: "Fatima"
+    affiliation: "Murdoch University, Perth, Australia"
+  - family-names: "Raza"
+    given-names: "Rehan"
+    affiliation: "Murdoch University, Perth, Australia"
+    email: "rehanrazag@gmail.com"
+  - family-names: "Arif"
+    given-names: "Muhammad"
+    affiliation: "Hamad Bin Khalifa University, Doha, Qatar"
+title: "XDenseQNet: Hybrid Quantum Neural Network for Skin Lesion Classification"
+version: 1.0.0
+date-released: "2026-03-09"
+url: "https://github.com/your-username/XDenseQNet"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Tariq"
+      given-names: "Shehroz"
+    - family-names: "Inayat"
+      given-names: "Umair"
+    - family-names: "Zulfiqar"
+      given-names: "Fatima"
+    - family-names: "Raza"
+      given-names: "Rehan"
+    - family-names: "Arif"
+      given-names: "Muhammad"
+  title: "XDenseQNet: Hybrid Quantum Neural Network for Skin Lesion Classification"
+  year: 2026

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.env
+.venv/
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (never commit raw data)
+data/raw/
+data/processed/
+data/MSLD_v2/
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Model checkpoints (use Git LFS or release assets)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.pkl
+
+# Results -- keep only final figures/tables committed manually
+results/raw/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ruff / linters
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage
+coverage.xml
