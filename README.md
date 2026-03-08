@@ -56,7 +56,7 @@ We propose **XDenseQNet**, a hybrid quantum-classical neural network for multi-c
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-username/XDenseQNet.git
+git clone https://github.com/umairinayat/XDenseQNet.git
 cd XDenseQNet
 pip install -r requirements.txt
 ```
