@@ -1,4 +1,4 @@
-# XDenseQNet: Hybrid Quantum Neural Network for Skin Lesion Classification
+# Monkeypox classification
 
 > A hybrid quantum-classical deep learning framework combining DenseNet121, CBAM attention, and a parameterised quantum circuit for 4-class skin image classification on the MSID dataset.
 
@@ -11,13 +11,6 @@
 
 ## Abstract
 
-Monkeypox is a contagious viral disease caused by the monkeypox virus, posing increasing global concerns because of recurring outbreaks and challenges in accurate clinical diagnosis. Due to high inter-class similarities, variability in shape and size between monkeypox and other dermatological classes, such as chickenpox and measles, makes it more challenging to distinguish them from these other classes. 
-Automated deep learning (DL)-based classification methods have emerged as promising diagnostic systems; however, ensemble and hybrid DL methods require substantial computational resources, limiting their practical applicability in resource-constrained environments. 
-To address these challenges, this study presented XDenseQNet, a novel hybrid densely connected quantum convolutional neural network (QCNN) that leverages a pretrained DenseNet121 as a feature extractor and a QCNN with 4 Qubits and 2 quantum layers as a classifier. 
-The proposed XDenseQNet framework is evaluated on a widely used multiclass monkeypox skin image dataset (MSID) and achieves an accuracy of $0.9583$, F1-score of $0.9470$, and AUC of $0.9945$ on the test set. Furthermore, the cross-dataset validation on the monkeypox skin lesion dataset (MSLD), the proposed XDenseQNet maintained its advantage and achieved an accuracy of $0.$, F1-score $0.$ and AUC $0.$. 
-Experimental findings demonstrate that the proposed XDenseQNet model achieved competitive results while exhibiting lower computational complexity and improved generalization capability. 
-Moreover, to support transparency and decision-making in the proposed XDenseQNet, we adopt the local interpretable model-agnostic explanations (LIME) framework, a widely used post-hoc explainable artificial intelligence (XAI) method, to generate explanations for the model's predictions. 
-These findings suggest that the proposed method offers a reliable solution for early detection of monkeypox in resource-constrained settings, thereby facilitating healthcare professionals' understanding of the rationale for the model's decisions.
 
 ---
 
